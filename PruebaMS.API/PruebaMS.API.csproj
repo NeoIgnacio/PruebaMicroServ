@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3bdb5bd0-f7dc-4d1a-b9e3-d7be2dd8a1c2</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="nuget.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="nuget.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PruebaMS.Application\PruebaMS.Application.csproj" />
+    <ProjectReference Include="..\PruebaMS.Contracts\PruebaMS.Contracts.csproj" />
+    <ProjectReference Include="..\PruebaMS.Infraestructure\PruebaMS.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
