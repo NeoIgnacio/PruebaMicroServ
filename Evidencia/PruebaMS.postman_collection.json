@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "78338965-2bb1-4676-93cf-3865fbd818bd",
+		"name": "PruebaMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "GetAllClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Cliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Cliente/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cliente",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nombre\": \"Maik Muniz\",\r\n  \"genero\": \"M\",\r\n  \"edad\": 10,\r\n  \"identificacion\": \"Licencia\",\r\n  \"direccion\": \"Ninguna\",\r\n  \"telefono\": \"Desconocido\",\r\n  \"contrasenia\": \"123456\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7036/api/Cliente/registrar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cliente",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"nombre\": \"Maik Muniz\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"Licencia\",\r\n    \"direccion\": \"Ninguna\",\r\n    \"telefono\": \"Desconocido\",\r\n    \"contrasenia\": \"123456\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7036/api/Cliente/modificar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cliente",
+								"modificar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Cliente/borrar?id=6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cliente",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Cuenta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Cuenta/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cuenta",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"clienteId\": 5,\r\n  \"numero\": \"323232\",\r\n  \"tipo\": \"CORRIENTE\",\r\n  \"saldo\": 3200,\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7036/api/Cuenta/registrar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cuenta",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"clienteId\": 5,\r\n    \"numero\": \"323232\",\r\n    \"tipo\": \"AHORROS\",\r\n    \"saldo\": 3200,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7036/api/Cuenta/editar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cuenta",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Cuenta/borrar?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Cuenta",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimiento",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Movimiento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Movimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Movimiento/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Movimiento",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"cuentaId\": 1,\r\n  \"fecha\": \"2023-03-09T16:50:49.497\",\r\n  \"tipo\": \"RETIRO\",\r\n  \"valor\": 40000,\r\n  \"saldo\": 0,\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7036/api/Movimiento/registrar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Movimiento",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"cuentaId\": 1,\r\n    \"fecha\": \"2023-03-08T16:50:49.497\",\r\n    \"tipo\": \"RETIRO\",\r\n    \"valor\": -900,\r\n    \"saldo\": 2000.00,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7036/api/Movimiento/editar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Movimiento",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Movimiento/borrar?id=6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Movimiento",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7036/api/Movimiento/2023-03-08, 2023-03-10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7036",
+							"path": [
+								"api",
+								"Movimiento",
+								"2023-03-08, 2023-03-10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
